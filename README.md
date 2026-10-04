@@ -3,9 +3,7 @@
 ![Hero Shot - Assembled Robot](media/hero_shot.jpeg)
 ![Walking Demo](media/walking_demo.gif)
 
-**This is a walkthrough of a custom-fabricated hexapod robot engineered from scratch. This repository serves as a comprehensive case study documenting the mathematical kinematics, custom PCB fabrication, and firmware architecture used to bring this robotic platform to life.**
-
-*(Note: This repository is structured as an architectural breakdown and hardware case study. Source code is omitted to focus on the engineering logic, mathematical models, and hardware implementation).*
+**This is a walkthrough of a custom hexapod robot engineered from scratch. This repository serves as a comprehensive documenting the mathematical kinematics, custom PCB, and firmware architecture used to bring this robotic platform to life.**
 
 ---
 
