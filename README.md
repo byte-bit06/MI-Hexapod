@@ -42,19 +42,34 @@ Given a target foot position $(x, y, z)$ relative to the coxa origin, the algori
 
 **1. Calculating the Coxa Angle ($\theta_1$)**
 The coxa rotates the entire leg assembly in the horizontal plane (XY).
-$$ \theta_1 = \arctan2(y, x) $$
+
+$$
+\theta_1 = \arctan2(y, x)
+$$
 
 **2. Calculating the 2D Plane Distance**
 Once the coxa is rotated, the problem simplifies to a 2D plane involving the femur and tibia. We calculate the horizontal distance from the femur joint to the target:
-$$ L_{prime} = \sqrt{x^2 + y^2} - L_{coxa} $$
+
+$$
+L_{prime} = \sqrt{x^2 + y^2} - L_{coxa}
+$$
 
 **3. Applying the Law of Cosines for Femur ($\theta_2$) and Tibia ($\theta_3$)**
 We find the straight-line Euclidean distance $D$ from the femur joint to the target foot position:
-$$ D = \sqrt{L_{prime}^2 + z^2} $$
+
+$$
+D = \sqrt{L_{prime}^2 + z^2}
+$$
 
 With $D$ representing the third side of a triangle formed by the Femur length ($L_{femur}$) and Tibia length ($L_{tibia}$), we apply the Law of Cosines to solve for the inner angles:
-$$ \alpha = \arccos\left(\frac{L_{femur}^2 + D^2 - L_{tibia}^2}{2 \cdot L_{femur} \cdot D}\right) $$
-$$ \beta = \arccos\left(\frac{L_{femur}^2 + L_{tibia}^2 - D^2}{2 \cdot L_{femur} \cdot L_{tibia}}\right) $$
+
+$$
+\alpha = \arccos\left(\frac{L_{femur}^2 + D^2 - L_{tibia}^2}{2 \cdot L_{femur} \cdot D}\right)
+$$
+
+$$
+\beta = \arccos\left(\frac{L_{femur}^2 + L_{tibia}^2 - D^2}{2 \cdot L_{femur} \cdot L_{tibia}}\right)
+$$
 
 The final servo angles ($\theta_2$ and $\theta_3$) are derived by adding geometric offsets depending on the physical resting position of the servo horns.
 
